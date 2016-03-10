@@ -1,13 +1,13 @@
 class Grid
-	def empty_grid
-		puts"   |   |   "
+	def empty_grid(m)
+		puts" #{m} | #{m} | #{m} "
 		puts"___|___|___"
-		puts"   |   |   "
+		puts" #{m} | #{m} | #{m} "
 		puts"___|___|___"
-		puts"   |   |   "
+		puts" #{m} | #{m} | #{m} "
 		puts"   |   |   "
 	end
 end
 
 bo=Grid.new
-bo.empty_grid
+bo.empty_grid("X")
