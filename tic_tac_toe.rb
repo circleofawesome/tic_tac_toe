@@ -1,17 +1,13 @@
-class Box
-	def row
-		puts" "+"____"+" "+"____"+" "+"____"
-		puts"|    |    |    |"
-		puts "|____|____|____|"
-
+class Grid
+	def empty_grid
+		puts"   |   |   "
+		puts"___|___|___"
+		puts"   |   |   "
+		puts"___|___|___"
+		puts"   |   |   "
+		puts"   |   |   "
 	end
-
-	def grid
-		3.times{row}
-	end
-
 end
 
-
-box=Box.new
-box.grid
+bo=Grid.new
+bo.empty_grid
