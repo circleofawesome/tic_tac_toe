@@ -20,33 +20,73 @@ boxG=board.box("_")
 boxH=board.box("_")
 boxI=board.box("_")
 
-full_board=boxA+boxB+boxC+"\n"+boxD+boxE+boxF+"\n"+boxG+boxH+boxI
 
-puts "where do you want the X?"
 
-input=gets.chomp
+puts full_board=boxA+boxB+boxC+"\n"+boxD+boxE+boxF+"\n"+boxG+boxH+boxI
+turn=2
 
-case input
-when "a"
-	boxA=board.box("X")
-when "b"
-	boxB=board.box("X")
-when "c"
-	boxC=board.box("X")
-when "d"
-	boxD=board.box("X")
-when "e"
-	boxE=board.box("X")
-when "f"
-	boxF=board.box("X")
-when "g"
-	boxG=board.box("X")
-when "h"
-	boxH=board.box("X")
-when "i"
-	boxI=board.box("X")
+while true
+	
+	p1="Player1"
+	p2="Player2"
+
+	if turn%2==0
+		puts "where do you want the X?"
+
+		input=gets.chomp
+
+		case input
+		when "a"
+			boxA=board.box("X")
+		when "b"
+			boxB=board.box("X")
+		when "c"
+			boxC=board.box("X")
+		when "d"
+			boxD=board.box("X")
+		when "e"
+			boxE=board.box("X")
+		when "f"
+			boxF=board.box("X")
+		when "g"
+			boxG=board.box("X")
+		when "h"
+			boxH=board.box("X")
+		when "i"
+			boxI=board.box("X")
+
+		end
+	else
+		
+		puts "where do you want the O?"
+
+		input=gets.chomp
+
+		case input
+		when "a"
+			boxA=board.box("O")
+		when "b"
+			boxB=board.box("O")
+		when "c"
+			boxC=board.box("O")
+		when "d"
+			boxD=board.box("O")
+		when "e"
+			boxE=board.box("O")
+		when "f"
+			boxF=board.box("O")
+		when "g"
+			boxG=board.box("O")
+		when "h"
+			boxH=board.box("O")
+		when "i"
+			boxI=board.box("O")
+
+		end
+	end
+	turn+=1
+	puts full_board=boxA+boxB+boxC+"\n"+boxD+boxE+boxF+"\n"+boxG+boxH+boxI
 
 end
-puts full_board=boxA+boxB+boxC+"\n"+boxD+boxE+boxF+"\n"+boxG+boxH+boxI
 
-#this works, run this and keep working with it 
+#this works in an infinit loop, run this and keep working with it 
