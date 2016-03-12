@@ -1,16 +1,5 @@
-class Grid
-	def grid(a,b,c,d,e,f,g,h,i)
-		puts" #{a} | #{b} | #{c} "
-		puts"___|___|___"
-		puts" #{d} | #{e} | #{f} "
-		puts"___|___|___"
-		puts" #{g} | #{h} | #{i} "
-		puts"   |   |   "
-	end
-	def marked_grid
-		
-	end
-end
+require_relative 'methods_and_classes'
+
 
 puts " /$$$$$$$$ /$$                 /$$$$$$$$                        /$$$$$$$$                 
 |__  $$__/|__/                |__  $$__/                       |__  $$__/                 
@@ -23,20 +12,22 @@ puts " /$$$$$$$$ /$$                 /$$$$$$$$                        /$$$$$$$$
                                                                                           
                                                                                           
                                                                                           "
+puts "				LET'S PLAY TIC-TAC-TOE!"
 
+3.times{puts "\n"}
 
-puts "Let's play Tic Tac Toe!"
-print "Player 1 choose X or O: "
-player1=gets.chomp
-while player1!="X"&&player1!="O"&&player1!="x"&&player1!="o"
-	print"Please select X or O: "
-	player1=gets.chomp
-end
-player2=nil
-if player1=="X"||player1=="x"
-	puts "Excellent, player 2 you are O!"
-	player2="O"
-elsif player1=="O"||player1=="o"
-	puts "Excellent, player 2 you are X!"
-	player2="X"
-end
+board_choices=Board.new()
+board_choices=board_choices.choices
+
+puts "Player 1 your are X. Player 2 you are O!"
+
+puts "~Here are your choices below~"
+
+puts board_choices
+
+2.times {puts "\n"}
+
+puts "Player 1 goes first. When ready choose where to place your X"
+
+game()
+
